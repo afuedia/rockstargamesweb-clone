@@ -1,0 +1,236 @@
+// declaración de variables
+
+$primary-color: #000000;
+$secundary-color: #494949;
+$amarilloRockstar: #fcaf17;
+$color1: #fff;
+$color2: #e8e8e8;
+$primary-font: "Helvetica";
+
+@mixin boton() {
+  border: solid 1px $color2;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: $amarilloRockstar;
+    color: $secundary-color;
+    border-color: $amarilloRockstar;
+  }
+}
+@mixin carta() {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  border-color: $color2;
+  overflow: hidden;
+  background-color: $primary-color;
+}
+
+body {
+  background-color: $primary-color;
+  color: $color1;
+
+  header {
+    height: 80px;
+    width: 100%;
+    background-color: #000000d9;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    padding: 2rem;
+
+    .menu {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .menu-button {
+        cursor: pointer;
+      }
+    }
+    .logo {
+      width: 2rem;
+      height: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .login {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $secundary-color;
+    }
+  }
+  .menu-abierto {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+  }
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-toggle:checked + .menu-abierto {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: $primary-color;
+
+    .buscador {
+      height: 3rem;
+      background-color: $secundary-color;
+      display: flex;
+      width: 100%;
+      padding-left: 2rem;
+      gap: 1rem;
+      align-items: center;
+    }
+    .carrusel {
+      padding: 2rem;
+      .carrusel-juegos {
+        display: flex;
+        gap: 1rem;
+        img {
+          width: 30%;
+        }
+      }
+    }
+    .navegador .enlaces-navegador li {
+      padding: 2rem;
+    }
+    .boton-launcher {
+      padding: 2rem;
+      text-align: center;
+      border-radius: 5px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background-color: $amarilloRockstar;
+      color: $primary-color;
+      width: 80%;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+  main {
+    width: 100%;
+    .relleno {
+      height: 80px;
+      background-color: #000000;
+    }
+
+    .imagen {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    .textos-main {
+      padding: 2rem;
+
+      .boton {
+        @include boton();
+      }
+      .deslizador {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        .circulitos {
+          background-color: #ffffff66;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          margin: 10px;
+          &:active {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .cartas {
+    background-color: $secundary-color;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    display: grid;
+    justify-content: center;
+    .titulo-cartas {
+      padding: 2rem;
+    }
+    .carta {
+      @include carta();
+
+      .texto-carta {
+        display: flex;
+        flex-direction: column;
+        height: 33%;
+        width: 100%;
+        padding: 2rem;
+        .textos {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  .juegos-destacados {
+    padding: 2rem;
+    background-color: $secundary-color;
+    .juegos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      .juego-destacado-principal {
+        grid-column: 1 / 3;
+      }
+      .juego {
+        border-color: $primary-color;
+        border-width: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .ver-mas-juegos {
+      margin: 2rem;
+      font-size: 1rem;
+      justify-self: center;
+      text-decoration: underline;
+    }
+  }
+  .suscribete {
+    padding: 2rem;
+    .boton-suscribete {
+      @include boton();
+    }
+  }
+}

@@ -1,0 +1,222 @@
+body {
+  background-color: #000000;
+  color: #fff;
+}
+body header {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8509803922);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  padding: 2rem;
+}
+body header .menu {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .menu .menu-button {
+  cursor: pointer;
+}
+body header .logo {
+  width: 2rem;
+  height: 2rem;
+}
+body header .logo img {
+  width: 100%;
+  height: 100%;
+}
+body header .login {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #494949;
+}
+body .menu-abierto {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+body .menu-toggle {
+  display: none;
+}
+body .menu-toggle:checked + .menu-abierto {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #000000;
+}
+body .menu-toggle:checked + .menu-abierto .buscador {
+  height: 3rem;
+  background-color: #494949;
+  display: flex;
+  width: 100%;
+  padding-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+}
+body .menu-toggle:checked + .menu-abierto .carrusel {
+  padding: 2rem;
+}
+body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos {
+  display: flex;
+  gap: 1rem;
+}
+body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos img {
+  width: 30%;
+}
+body .menu-toggle:checked + .menu-abierto .navegador .enlaces-navegador li {
+  padding: 2rem;
+}
+body .menu-toggle:checked + .menu-abierto .boton-launcher {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fcaf17;
+  color: #000000;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+body main {
+  width: 100%;
+}
+body main .relleno {
+  height: 80px;
+  background-color: #000000;
+}
+body main .imagen {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+body main .textos-main {
+  padding: 2rem;
+}
+body main .textos-main .boton {
+  border: solid 1px #e8e8e8;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body main .textos-main .boton:hover {
+  background-color: #fcaf17;
+  color: #494949;
+  border-color: #fcaf17;
+}
+body main .textos-main .deslizador {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body main .textos-main .deslizador .circulitos {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+}
+body main .textos-main .deslizador .circulitos:active {
+  width: 30px;
+}
+body .cartas {
+  background-color: #494949;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  display: grid;
+  justify-content: center;
+}
+body .cartas .titulo-cartas {
+  padding: 2rem;
+}
+body .cartas .carta {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  border-color: #e8e8e8;
+  overflow: hidden;
+  background-color: #000000;
+}
+body .cartas .carta .texto-carta {
+  display: flex;
+  flex-direction: column;
+  height: 33%;
+  width: 100%;
+  padding: 2rem;
+}
+body .cartas .carta .texto-carta .textos {
+  display: flex;
+  flex-direction: row;
+}
+body .juegos-destacados {
+  padding: 2rem;
+  background-color: #494949;
+}
+body .juegos-destacados .juegos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+body .juegos-destacados .juegos .juego-destacado-principal {
+  grid-column: 1/3;
+}
+body .juegos-destacados .juegos .juego {
+  border-color: #000000;
+  border-width: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body .juegos-destacados .juegos .juego img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+body .juegos-destacados .ver-mas-juegos {
+  margin: 2rem;
+  font-size: 1rem;
+  justify-self: center;
+  text-decoration: underline;
+}
+body .suscribete {
+  padding: 2rem;
+}
+body .suscribete .boton-suscribete {
+  border: solid 1px #e8e8e8;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+body .suscribete .boton-suscribete:hover {
+  background-color: #fcaf17;
+  color: #494949;
+  border-color: #fcaf17;
+}
+
+/*# sourceMappingURL=main.css.map */
