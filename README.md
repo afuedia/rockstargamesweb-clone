@@ -1,5 +1,5 @@
-Proyecto Final del Módulo: Réplica de la Página de Rockstar 🎮
-Este es mi proyecto final para el módulo, donde puse en práctica lo que aprendí sobre Git, GitHub, HTML, CSS, y SASS. Mi objetivo fue replicar la página principal de Rockstar, asegurándome de que fuera funcional y adaptativa para dispositivos móviles, tablets y PCs.
+Proyecto Final del Módulo 2 "HTML y CSS avanzado": Réplicar la Página de Rockstar Games 🎮
+En este segundo proyecto final para el módulo 2 del bootcamp, puse en práctica lo que aprendí sobre Git, GitHub, HTML, CSS, y SASS. Mi objetivo fue replicar la página principal de Rockstar, asegurándome de que fuera funcional y adaptativa para dispositivos móviles, tablets y PCs.
 
 🛠️ ¿Qué hice?
 
@@ -25,14 +25,6 @@ Este es mi proyecto final para el módulo, donde puse en práctica lo que aprend
    📈 Evaluación personal
    Considero que este proyecto me permitió aplicar de manera práctica lo aprendido en el módulo. La parte más desafiante fue lograr un diseño responsive fiel al original, pero con esfuerzo y atención al detalle, logré superar los retos.
 
-🚀 Cómo ver el proyecto
-Puedes explorar este proyecto siguiendo estos pasos:
-
-Clona el repositorio en tu máquina local:
-bash
-Copiar código
-git clone https://github.com/miusuario/proyecto-rockstar.git
-Abre el archivo index.html en tu navegador para visualizar la réplica de la página.
 🔗 Recursos que utilicé
 HTML: Documentación de MDN
 CSS: Documentación de MDN
