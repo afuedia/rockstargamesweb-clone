@@ -1,8 +1,22 @@
-body {
+@font-face {
+  font-family: HelveticaNowDisplay;
+  src: url("./fonts/HelveticaNowDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: HelveticaNowText;
+  src: url("./fonts/helvetica-now-font-family-1732613676-0/helveticanowtext-bold-demo.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+html body {
   background-color: #000000;
   color: #fff;
+  font-family: HelveticaNowText;
 }
-body header {
+html body header {
   height: 80px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8509803922);
@@ -12,25 +26,25 @@ body header {
   align-items: center;
   padding: 2rem;
 }
-body header .menu {
+html body header .menu {
   width: 2rem;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body header .menu .menu-button {
+html body header .menu .menu-button {
   cursor: pointer;
 }
-body header .logo {
+html body header .logo {
   width: 2rem;
   height: 2rem;
 }
-body header .logo img {
+html body header .logo img {
   width: 100%;
   height: 100%;
 }
-body header .login {
+html body header .login {
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -39,46 +53,54 @@ body header .login {
   border-radius: 50%;
   background-color: #494949;
 }
-body .menu-abierto {
+html body .menu-abierto {
   display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
   height: 0;
 }
-body .menu-toggle {
+html body .menu-toggle {
   display: none;
 }
-body .menu-toggle:checked + .menu-abierto {
+html body .menu-toggle:checked ~ *:not(.menu-abierto) {
+  display: none;
+}
+html body .menu-toggle:checked + .menu-abierto {
   display: flex;
   flex-direction: column;
   height: 100%;
   background-color: #000000;
 }
-body .menu-toggle:checked + .menu-abierto .buscador {
-  height: 3rem;
+html body .menu-toggle:checked + .menu-abierto .buscador {
+  min-height: 3rem;
   background-color: #494949;
   display: flex;
   width: 100%;
   padding-left: 2rem;
   gap: 1rem;
   align-items: center;
+  margin-top: 80px;
 }
-body .menu-toggle:checked + .menu-abierto .carrusel {
+html body .menu-toggle:checked + .menu-abierto .carrusel {
   padding: 2rem;
 }
-body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos {
+html body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-titulo {
+  font-size: 2rem;
+}
+html body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos {
   display: flex;
   gap: 1rem;
 }
-body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos img {
-  width: 30%;
+html body .menu-toggle:checked + .menu-abierto .carrusel .carrusel-juegos img {
+  width: 33%;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 15px;
+  border-style: solid;
 }
-body .menu-toggle:checked + .menu-abierto .navegador .enlaces-navegador li {
+html body .menu-toggle:checked + .menu-abierto .navegador .enlaces-navegador li {
   padding: 2rem;
+  font-size: 1.25rem;
 }
-body .menu-toggle:checked + .menu-abierto .boton-launcher {
+html body .menu-toggle:checked + .menu-abierto .boton-launcher {
   padding: 2rem;
   text-align: center;
   border-radius: 5px;
@@ -92,22 +114,29 @@ body .menu-toggle:checked + .menu-abierto .boton-launcher {
   justify-self: center;
   align-self: center;
 }
-body main {
+html body main {
   width: 100%;
 }
-body main .relleno {
+html body main .relleno {
   height: 80px;
   background-color: #000000;
 }
-body main .imagen {
+html body main .imagen {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
 }
-body main .textos-main {
-  padding: 2rem;
+html body main .textos-main {
+  padding: 1rem;
 }
-body main .textos-main .boton {
+html body main .textos-main .subtitulo {
+  font-size: 0.75rem;
+}
+html body main .textos-main .titulo {
+  font-family: HelveticaNowDisplay;
+  font-size: 2rem;
+}
+html body main .textos-main .boton {
   border: solid 1px #e8e8e8;
   text-align: center;
   border-radius: 5px;
@@ -115,29 +144,32 @@ body main .textos-main .boton {
   padding-bottom: 15px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: HelveticaNowDisplay;
 }
-body main .textos-main .boton:hover {
+html body main .textos-main .boton:hover {
   background-color: #fcaf17;
   color: #494949;
   border-color: #fcaf17;
 }
-body main .textos-main .deslizador {
+html body main .textos-main .deslizador {
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-body main .textos-main .deslizador .circulitos {
+html body main .textos-main .deslizador .circulitos {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   width: 10px;
   height: 10px;
   margin: 10px;
 }
-body main .textos-main .deslizador .circulitos:active {
+html body main .textos-main .deslizador .circulitos:active {
   width: 30px;
 }
-body .cartas {
+html body .cartas {
   background-color: #494949;
   width: 100%;
   max-width: 100%;
@@ -145,10 +177,11 @@ body .cartas {
   display: grid;
   justify-content: center;
 }
-body .cartas .titulo-cartas {
+html body .cartas .titulo-cartas {
   padding: 2rem;
+  font-size: 1.5rem;
 }
-body .cartas .carta {
+html body .cartas .carta {
   width: 80%;
   height: auto;
   display: flex;
@@ -161,50 +194,60 @@ body .cartas .carta {
   overflow: hidden;
   background-color: #000000;
 }
-body .cartas .carta .texto-carta {
+html body .cartas .carta .texto-carta {
   display: flex;
   flex-direction: column;
   height: 33%;
   width: 100%;
   padding: 2rem;
 }
-body .cartas .carta .texto-carta .textos {
+html body .cartas .carta .texto-carta .textos {
   display: flex;
   flex-direction: row;
+  font-size: 0.75rem;
 }
-body .juegos-destacados {
+html body .cartas .carta .texto-carta .titulo-carta {
+  font-size: 1.25rem;
+}
+html body .juegos-destacados {
   padding: 2rem;
   background-color: #494949;
 }
-body .juegos-destacados .juegos {
+html body .juegos-destacados .juegos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-body .juegos-destacados .juegos .juego-destacado-principal {
+html body .juegos-destacados .juegos .juego-destacado-principal {
   grid-column: 1/3;
 }
-body .juegos-destacados .juegos .juego {
+html body .juegos-destacados .juegos .juego {
   border-color: #000000;
   border-width: 5px;
   border-radius: 10px;
   overflow: hidden;
 }
-body .juegos-destacados .juegos .juego img {
+html body .juegos-destacados .juegos .juego img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-body .juegos-destacados .ver-mas-juegos {
+html body .juegos-destacados .ver-mas-juegos {
   margin: 2rem;
   font-size: 1rem;
   justify-self: center;
   text-decoration: underline;
 }
-body .suscribete {
+html body .suscribete {
   padding: 2rem;
 }
-body .suscribete .boton-suscribete {
+html body .suscribete .suscribite-titulo {
+  font-size: 2rem;
+}
+html body .suscribete .suscribite-texto {
+  font-size: 1rem;
+}
+html body .suscribete .boton-suscribete {
   border: solid 1px #e8e8e8;
   text-align: center;
   border-radius: 5px;
@@ -212,8 +255,11 @@ body .suscribete .boton-suscribete {
   padding-bottom: 15px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: HelveticaNowDisplay;
 }
-body .suscribete .boton-suscribete:hover {
+html body .suscribete .boton-suscribete:hover {
   background-color: #fcaf17;
   color: #494949;
   border-color: #fcaf17;
