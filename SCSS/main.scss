@@ -171,21 +171,41 @@ html {
         width: 100%;
         height: auto;
         margin-bottom: 1rem;
-      }
-      .textos-main {
-        padding: 1rem;
-        .subtitulo {
-          font-size: 0.75rem;
-        }
-        .titulo {
-          font-family: $secundary-font;
-          font-size: 2rem;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
         }
 
-        .boton {
-          @include boton();
+        input[type="radio"] {
+          display: none;
         }
-        .deslizador {
+
+        li {
+          display: none;
+        }
+
+        input[type="radio"]:checked + li {
+          display: block;
+        }
+        .textos-main {
+          padding: 1rem;
+          .subtitulo {
+            font-size: 0.75rem;
+          }
+          .titulo {
+            font-family: $secundary-font;
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .boton {
+        @include boton();
+      }
+
+      .deslizador {
+        ul {
           display: flex;
           flex-direction: row;
           margin-top: 1rem;
@@ -196,9 +216,8 @@ html {
             width: 10px;
             height: 10px;
             margin: 10px;
-            &:active {
-              width: 30px;
-            }
+            cursor: pointer;
+            transition: all 0.3s ease;
           }
         }
       }

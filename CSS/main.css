@@ -126,17 +126,30 @@ html body main .imagen {
   height: auto;
   margin-bottom: 1rem;
 }
-html body main .textos-main {
+html body main .imagen ul {
+  list-style-type: none;
+  padding: 0;
+}
+html body main .imagen input[type=radio] {
+  display: none;
+}
+html body main .imagen li {
+  display: none;
+}
+html body main .imagen input[type=radio]:checked + li {
+  display: block;
+}
+html body main .imagen .textos-main {
   padding: 1rem;
 }
-html body main .textos-main .subtitulo {
+html body main .imagen .textos-main .subtitulo {
   font-size: 0.75rem;
 }
-html body main .textos-main .titulo {
+html body main .imagen .textos-main .titulo {
   font-family: HelveticaNowDisplay;
   font-size: 2rem;
 }
-html body main .textos-main .boton {
+html body main .boton {
   border: solid 1px #e8e8e8;
   text-align: center;
   border-radius: 5px;
@@ -148,26 +161,25 @@ html body main .textos-main .boton {
   font-size: 1rem;
   font-family: HelveticaNowDisplay;
 }
-html body main .textos-main .boton:hover {
+html body main .boton:hover {
   background-color: #fcaf17;
   color: #494949;
   border-color: #fcaf17;
 }
-html body main .textos-main .deslizador {
+html body main .deslizador ul {
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-html body main .textos-main .deslizador .circulitos {
+html body main .deslizador ul .circulitos {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   width: 10px;
   height: 10px;
   margin: 10px;
-}
-html body main .textos-main .deslizador .circulitos:active {
-  width: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 html body .cartas {
   background-color: #494949;

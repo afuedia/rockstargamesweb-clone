@@ -31,7 +31,7 @@
         <i class="fa-regular fa-user"></i>
       </div>
     </header>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
     <section class="menu-abierto" id="menu-abierto">
       <div class="buscador">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -58,17 +58,47 @@
     <main>
       <div class="relleno"></div>
       <div class="imagen">
-        <img src="./images/GTA.webp" />
+        <ul>
+          <input type="radio" id="carrusel-uno" name="carrusel" checked/>
+          <li class="carrusel-uno">
+            <img src="./images/gta.png" />
+            <div class="textos-main">
+              <div class="subtitulo">Grand Theft Auto VI</div>
+              <div class="titulo">Trailer 1</div>
+            </div>
+          </li>
+          <input type="radio" id="carrusel-dos" name="carrusel"/>
+          <li><img src="./images/RRa.png" />
+            <div class="textos-main">
+              <div class="subtitulo">Red Dead Redemption</div>
+              <div class="titulo">Ya en PC</div>
+            </div>
+          </li>
+          <input type="radio" id="carrusel-tre" name="carrusel"/>
+          <li><img src="./images/bdb.png " />
+            <div class="textos-main">
+              <div class="subtitulo">Grand Theft Auto Online</div>
+              <div class="titulo">Bottom Dollar Bounties</div>
+            </div>
+          </li>
+          <input type="radio" id="carrusel-cua" name="carrusel" />
+          <li><img src="./images/fmf.png"  />
+            <div class="textos-main">
+              <div class="subtitulo">Grand Theft Auto VI</div>
+              <div class="titulo">Asalto a Cluckin' Bell</div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="textos-main">
-        <div class="subtitulo">Grand Theft Auto VI</div>
-        <div class="titulo">Trailer 1</div>
+      
         <div class="boton">VER AHORA</div>
         <div class="deslizador">
-          <div class="circulitos" tabindex="0"></div>
-          <div class="circulitos" tabindex="0"></div>
-          <div class="circulitos" tabindex="0"></div>
-          <div class="circulitos" tabindex="0"></div>
+          <ul>
+            <label for="carrusel-uno"><li class="circulitos" tabindex="0"></li></label>
+            <label for="carrusel-dos"><li class="circulitos" tabindex="0"></li></label>
+            <label for="carrusel-tre"><li class="circulitos" tabindex="0"></li></label>
+            <label for="carrusel-cua"><li class="circulitos" tabindex="0"></li></label>
+          </ul>
         </div>
       </div>
     </main>
