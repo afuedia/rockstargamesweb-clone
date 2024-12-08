@@ -15,6 +15,9 @@ html body {
   background-color: #000000;
   color: #fff;
   font-family: HelveticaNowText;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 html body header {
   height: 80px;
@@ -26,12 +29,25 @@ html body header {
   align-items: center;
   padding: 2rem;
 }
+@media (min-width: 1024px) {
+  html body header {
+    padding: 0;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+  }
+}
 html body header .menu {
   width: 2rem;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  html body header .menu {
+    display: none;
+  }
 }
 html body header .menu .menu-button {
   cursor: pointer;
@@ -40,9 +56,90 @@ html body header .logo {
   width: 2rem;
   height: 2rem;
 }
+@media (min-width: 1024px) {
+  html body header .logo {
+    align-self: center;
+  }
+}
 html body header .logo img {
   width: 100%;
   height: 100%;
+}
+html body header .lista {
+  display: none;
+}
+@media (min-width: 1024px) {
+  html body header .lista {
+    display: flex;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+html body header .lista ul {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-items: center;
+  align-items: center;
+}
+html body header .lista ul li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+}
+html body header .lista ul li:hover {
+  border-bottom: 2px solid #fff;
+}
+html body header .modulo-derecho {
+  display: none;
+}
+@media (min-width: 1024px) {
+  html body header .modulo-derecho {
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+  }
+  html body header .modulo-derecho .boton-launcher {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fcaf17;
+    color: #000000;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  html body header .modulo-derecho .boton-launcher {
+    width: 178px;
+    height: 37px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  html body header .modulo-derecho .login {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #494949;
+  }
 }
 html body header .login {
   width: 2rem;
@@ -53,9 +150,20 @@ html body header .login {
   border-radius: 50%;
   background-color: #494949;
 }
+@media (min-width: 1024px) {
+  html body header .login {
+    display: none;
+  }
+}
 html body .menu-abierto {
   display: none;
   height: 0;
+}
+@media (min-width: 1024px) {
+  html body .menu-abierto {
+    display: none;
+    width: 0;
+  }
 }
 html body .menu-toggle {
   display: none;
@@ -114,6 +222,17 @@ html body .menu-toggle:checked + .menu-abierto .boton-launcher {
   justify-self: center;
   align-self: center;
 }
+@media (min-width: 1024px) {
+  html body .menu-toggle:checked + .menu-abierto .boton-launcher {
+    width: 178px;
+    height: 37px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+}
 html body main {
   width: 100%;
 }
@@ -139,8 +258,22 @@ html body main .imagen li {
 html body main .imagen input[type=radio]:checked + li {
   display: block;
 }
+@media (min-width: 1024px) {
+  html body main .imagen input[type=radio]:checked + li {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  html body main .imagen input[type=radio]:checked + li img {
+    width: auto;
+    height: 85vh;
+  }
+}
 html body main .imagen .textos-main {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 html body main .imagen .textos-main .subtitulo {
   font-size: 0.75rem;
@@ -149,7 +282,7 @@ html body main .imagen .textos-main .titulo {
   font-family: HelveticaNowDisplay;
   font-size: 2rem;
 }
-html body main .boton {
+html body main .imagen .textos-main .boton {
   border: solid 1px #e8e8e8;
   text-align: center;
   border-radius: 5px;
@@ -161,16 +294,43 @@ html body main .boton {
   font-size: 1rem;
   font-family: HelveticaNowDisplay;
 }
-html body main .boton:hover {
+html body main .imagen .textos-main .boton:hover {
   background-color: #fcaf17;
   color: #494949;
   border-color: #fcaf17;
+}
+@media (min-width: 1024px) {
+  html body main .imagen .textos-main .boton {
+    width: 190px;
+    height: 50px;
+  }
+}
+html body main .deslizador {
+  height: 20px;
+  width: 100%;
+  display: inline;
+  z-index: 10;
+}
+@media (min-width: 1024px) {
+  html body main .deslizador {
+    width: auto;
+    height: 85vh;
+    bottom: 100px;
+    left: 80%;
+    position: relative;
+  }
 }
 html body main .deslizador ul {
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  height: 100%;
+  width: 100%;
+}
+html body main .deslizador ul .label {
+  width: 100%;
+  height: 100%;
 }
 html body main .deslizador ul .circulitos {
   background-color: rgba(255, 255, 255, 0.4);
@@ -180,6 +340,12 @@ html body main .deslizador ul .circulitos {
   margin: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+@media (min-width: 1024px) {
+  html body main .deslizador ul .circulitos {
+    width: 15px;
+    height: 15px;
+  }
 }
 html body .cartas {
   background-color: #494949;
@@ -193,7 +359,13 @@ html body .cartas .titulo-cartas {
   padding: 2rem;
   font-size: 1.5rem;
 }
-html body .cartas .carta {
+@media (min-width: 1024px) {
+  html body .cartas .carta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+html body .cartas .carta-container .carta {
   width: 80%;
   height: auto;
   display: flex;
@@ -206,19 +378,24 @@ html body .cartas .carta {
   overflow: hidden;
   background-color: #000000;
 }
-html body .cartas .carta .texto-carta {
+@media (min-width: 1024px) {
+  html body .cartas .carta-container .carta {
+    width: 89%;
+  }
+}
+html body .cartas .carta-container .carta .texto-carta {
   display: flex;
   flex-direction: column;
   height: 33%;
   width: 100%;
   padding: 2rem;
 }
-html body .cartas .carta .texto-carta .textos {
+html body .cartas .carta-container .carta .texto-carta .textos {
   display: flex;
   flex-direction: row;
   font-size: 0.75rem;
 }
-html body .cartas .carta .texto-carta .titulo-carta {
+html body .cartas .carta-container .carta .texto-carta .titulo-carta {
   font-size: 1.25rem;
 }
 html body .juegos-destacados {
@@ -230,8 +407,27 @@ html body .juegos-destacados .juegos {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+@media (min-width: 1024px) {
+  html body .juegos-destacados .juegos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 html body .juegos-destacados .juegos .juego-destacado-principal {
   grid-column: 1/3;
+}
+html body .juegos-destacados .juegos .juego-destacado-principal .dos {
+  display: none;
+}
+@media (min-width: 1024px) {
+  html body .juegos-destacados .juegos .juego-destacado-principal {
+    grid-column: 1/5;
+  }
+  html body .juegos-destacados .juegos .juego-destacado-principal .uno {
+    display: none;
+  }
+  html body .juegos-destacados .juegos .juego-destacado-principal .dos {
+    display: block;
+  }
 }
 html body .juegos-destacados .juegos .juego {
   border-color: #000000;
