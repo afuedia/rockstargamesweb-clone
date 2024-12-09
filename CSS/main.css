@@ -294,6 +294,17 @@ html body main .imagen .textos-main .boton {
   font-size: 1rem;
   font-family: HelveticaNowDisplay;
 }
+@media (min-width: 1024px) {
+  html body main .imagen .textos-main .boton {
+    width: 178px;
+    height: 37px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+}
 html body main .imagen .textos-main .boton:hover {
   background-color: #fcaf17;
   color: #494949;
@@ -467,10 +478,104 @@ html body .suscribete .boton-suscribete {
   font-size: 1rem;
   font-family: HelveticaNowDisplay;
 }
+@media (min-width: 1024px) {
+  html body .suscribete .boton-suscribete {
+    width: 178px;
+    height: 37px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+}
 html body .suscribete .boton-suscribete:hover {
   background-color: #fcaf17;
   color: #494949;
   border-color: #fcaf17;
+}
+html body .footer-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-inline: 2rem;
+}
+html body .footer-header .footer-container-one {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+html body .footer-header .footer-container-one ul li {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+html body .footer-header .footer-container-one ul li:hover {
+  color: #fcaf17;
+  cursor: pointer;
+}
+html body .footer-header .selector-idioma {
+  width: 100%;
+  font-size: 0.75rem;
+  padding: 0;
+  grid-column: 3/3;
+}
+html body .footer-header .rrss {
+  margin-bottom: 2rem;
+  grid-column: 1/3;
+}
+html body .footer-header .rrss ul {
+  display: flex;
+  flex-direction: row;
+}
+html body .footer-header .rrss ul li {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+html body .footer-header .rrss ul li:hover {
+  border-radius: 50%;
+  background-color: #494949;
+}
+html body .footer-header .footer-container-two {
+  display: flex;
+  color: #494949;
+  grid-column: 1/3;
+}
+html body .footer-header .footer-container-two ul li {
+  margin-bottom: 1rem;
+}
+html body .footer-header .footer-container-two ul li:hover {
+  color: #fcaf17;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  html body .footer-header .footer-container-two {
+    display: flex;
+    flex-direction: column;
+  }
+}
+html body .footer-footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  html body .footer-footer {
+    flex-direction: row;
+  }
+}
+html body .footer-footer .ciudades ul {
+  display: flex;
+  padding: 1rem;
+}
+html body .footer-footer .ciudades ul li {
+  padding-inline: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
