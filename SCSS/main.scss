@@ -13,7 +13,7 @@
 // declaración de variables
 
 $primary-color: #000000;
-$secundary-color: #494949;
+$secundary-color: #0b0b0b;
 $amarilloRockstar: #fcaf17;
 $color1: #fff;
 $color2: #e8e8e8;
@@ -97,6 +97,7 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    max-width: 100vw;
 
     header {
       height: 80px;
@@ -107,6 +108,7 @@ html {
       position: fixed;
       align-items: center;
       padding: 2rem;
+      border-bottom: 1px solid $secundary-color;
       @media (min-width: $breakpoint-escritorio) {
         padding: 0;
         justify-content: space-around;
@@ -165,7 +167,8 @@ html {
             align-content: center;
 
             &:hover {
-              border-bottom: 2px solid #fff;
+              border-bottom: 2.5px solid #fff;
+              cursor: pointer;
             }
           }
         }
