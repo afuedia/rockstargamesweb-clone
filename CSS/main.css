@@ -312,6 +312,7 @@ html body main .imagen .textos-main .boton:hover {
   background-color: #fcaf17;
   color: #0b0b0b;
   border-color: #fcaf17;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   html body main .imagen .textos-main .boton {
@@ -408,13 +409,24 @@ html body .cartas .carta-container .carta .texto-carta .textos {
   display: flex;
   flex-direction: row;
   font-size: 0.75rem;
+  gap: 10px;
 }
 html body .cartas .carta-container .carta .texto-carta .titulo-carta {
   font-size: 1.25rem;
 }
+html body .cartas .ver-mas {
+  margin: 2rem;
+  font-size: 1rem;
+  justify-self: center;
+  text-decoration: underline;
+}
 html body .juegos-destacados {
   padding: 2rem;
   background-color: #0b0b0b;
+}
+html body .juegos-destacados .titulo-juegos-destacados {
+  padding: 2rem;
+  font-size: 1.5rem;
 }
 html body .juegos-destacados .juegos {
   display: grid;
@@ -463,6 +475,10 @@ html body .juegos-destacados .ver-mas-juegos {
 html body .suscribete {
   padding: 2rem;
 }
+html body .suscribete div img {
+  width: 50px;
+  height: auto;
+}
 html body .suscribete .suscribite-titulo {
   font-size: 2rem;
 }
@@ -496,6 +512,7 @@ html body .suscribete .boton-suscribete:hover {
   background-color: #fcaf17;
   color: #0b0b0b;
   border-color: #fcaf17;
+  cursor: pointer;
 }
 html body .footer-header {
   display: grid;
@@ -540,7 +557,10 @@ html body .footer-header .rrss ul li {
   align-items: center;
   border-radius: 50%;
 }
-html body .footer-header .rrss ul li:hover {
+html body .footer-header .rrss ul li p {
+  display: inline-block;
+}
+html body .footer-header .rrss ul li p:hover {
   border-radius: 50%;
   background-color: #0b0b0b;
 }
@@ -551,8 +571,12 @@ html body .footer-header .footer-container-two {
 }
 html body .footer-header .footer-container-two ul li {
   margin-bottom: 1rem;
+  width: 33%;
 }
-html body .footer-header .footer-container-two ul li:hover {
+html body .footer-header .footer-container-two ul li p {
+  display: inline-block;
+}
+html body .footer-header .footer-container-two ul li p:hover {
   color: #fcaf17;
   cursor: pointer;
 }
@@ -567,10 +591,12 @@ html body .footer-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 @media (min-width: 1024px) {
   html body .footer-footer {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 html body .footer-footer .ciudades ul {

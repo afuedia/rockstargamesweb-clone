@@ -46,6 +46,7 @@ $breakpoint-escritorio: 1024px;
     background-color: $amarilloRockstar;
     color: $secundary-color;
     border-color: $amarilloRockstar;
+    cursor: pointer;
   }
 }
 @mixin boton-launcher() {
@@ -70,6 +71,10 @@ $breakpoint-escritorio: 1024px;
     justify-items: center;
     align-content: center;
   }
+}
+@mixin titulo-seccion() {
+  padding: 2rem;
+  font-size: 1.5rem;
 }
 @mixin carta() {
   width: 80%;
@@ -369,8 +374,7 @@ html {
       display: grid;
       justify-content: center;
       .titulo-cartas {
-        padding: 2rem;
-        font-size: 1.5rem;
+        @include titulo-seccion();
       }
       .carta-container {
         @media (min-width: $breakpoint-escritorio) {
@@ -391,6 +395,7 @@ html {
               display: flex;
               flex-direction: row;
               font-size: 0.75rem;
+              gap: 10px;
             }
             .titulo-carta {
               font-size: 1.25rem;
@@ -398,10 +403,19 @@ html {
           }
         }
       }
+      .ver-mas {
+        margin: 2rem;
+        font-size: 1rem;
+        justify-self: center;
+        text-decoration: underline;
+      }
     }
     .juegos-destacados {
       padding: 2rem;
       background-color: $secundary-color;
+      .titulo-juegos-destacados {
+        @include titulo-seccion();
+      }
       .juegos {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -446,6 +460,10 @@ html {
     }
     .suscribete {
       padding: 2rem;
+      div img {
+        width: 50px;
+        height: auto;
+      }
       .suscribite-titulo {
         font-size: 2rem;
       }
@@ -496,9 +514,12 @@ html {
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            &:hover {
-              border-radius: 50%;
-              background-color: $secundary-color;
+            p {
+              display: inline-block;
+              &:hover {
+                border-radius: 50%;
+                background-color: $secundary-color;
+              }
             }
           }
         }
@@ -509,9 +530,13 @@ html {
         grid-column: 1/3;
         ul li {
           margin-bottom: 1rem;
-          &:hover {
-            color: $amarilloRockstar;
-            cursor: pointer;
+          width: 33%;
+          p {
+            display: inline-block;
+            &:hover {
+              color: $amarilloRockstar;
+              cursor: pointer;
+            }
           }
         }
         @media (min-width: $breakpoint-escritorio) {
@@ -525,8 +550,10 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: white;
       @media (min-width: $breakpoint-escritorio) {
         flex-direction: row;
+        justify-content: space-between;
       }
       .ciudades ul {
         display: flex;
